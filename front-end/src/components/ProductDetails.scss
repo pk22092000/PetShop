@@ -1,0 +1,36 @@
+$text-cl: #000;
+
+.details__imgs {
+
+  img {
+    width: 100%;
+  }
+}
+
+.details {
+  color: $text-cl;;
+  &__name {
+    font-size: 2rem;
+    line-height: 1;
+  }
+  &__price {
+    font-size: 1.5rem;
+    color: #ff0000;
+  }
+  &__desc {
+
+  }
+  &__amount {
+    
+  }
+  &__sold {
+    
+  }
+
+}
+
+@media (max-width: 767.99px) {
+  .details {
+    margin-top: 1rem;
+  }
+}

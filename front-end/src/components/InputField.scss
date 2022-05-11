@@ -1,0 +1,109 @@
+$success: #7ab893;
+$a: #377D6A;
+$errors: #ff3333;
+$text: #134a46;
+$input-bg: #e8f0fe;
+
+
+.form-group {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin: 8px 10px;
+  font-size: .8rem;
+
+  .error {
+    border: 1px solid $errors!important;
+    color: $errors!important;
+    + label {
+      background: $errors!important;
+      color: #fff!important;
+    } 
+  }
+  .success {
+    border: 1px solid $success!important;
+    background: $input-bg;
+    color: $success!important;
+    + label {
+      background: $success!important;
+      color: #fff!important;
+    } 
+  }
+  
+}
+
+.input-field__input {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  padding: 10px 0 10px 15px;
+  // font-family: "Open Sans", sans;
+  font-weight: 400;
+  color: #7ab893;
+  background: #efefef;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  text-indent: 30%; // Arbitrary.
+  transition: all .3s ease-in-out;
+  
+  &::-webkit-input-placeholder {
+    color: #efefef;
+    text-indent: 0;
+    font-weight: 300;
+  }
+
+  + label {
+    display: inline-block;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    // bottom: 8px;
+    padding: 5px 8px;
+    color: #032429;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 rgba(19, 74, 70, 0);
+    transition: all .3s ease-in-out;
+    border-radius: 3px;
+    background: rgba(122, 184, 147, 0);
+    
+    &:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 100%;
+      left: 50%;
+      margin-left: -3px;
+      border-left: 3px solid transparent;
+      border-right: 3px solid transparent;
+      border-top: 3px solid #7ab89300;
+      transition: all .3s ease-in-out;
+    }
+  }
+}
+.input-field__input:focus,
+.input-field__input:active {
+  color: #7ab893;
+  border: 1px solid $success;
+  background: #fff;
+  text-indent: 0;
+  
+  
+  &::-webkit-input-placeholder {
+    color: #aaa;
+  }
+  + label {
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
+    background: #7ab893;
+    transform: translateY(-40px);
+    
+    &:after {
+      border-top: 4px solid #7ab893;
+    }
+  }
+}
+

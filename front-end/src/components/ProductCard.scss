@@ -1,0 +1,60 @@
+$text-cl: rgb(0, 0, 0);
+$primary-cl: var(--primary-lighter-color);
+
+
+@mixin excerpt($lines-to-show: 0) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines-to-show;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.product-card {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background-color: #fff;
+  // border: 1px solid $primary-cl;
+  border-radius: 4px;  
+  scale: 0;
+  transition: all ease-in-out .2s;
+  transform-origin: 0% 100%;
+  will-change: transform;
+
+  &:hover {
+    transform: translate(0px, -1px) scale(1.05);
+  }
+
+  &__img {
+    width: 100%;
+    height: 80%;
+    border-bottom: 1px solid #ededed;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-position: center;
+   
+  }
+  &__name {
+    @include excerpt(1);
+
+    width: 100%;
+    color: $text-cl;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  &__price {
+    color: $text-cl;
+  }
+}
