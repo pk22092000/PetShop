@@ -1,0 +1,46 @@
+@import "~bootstrap/scss/bootstrap";
+// @import "bootstrap/dist/css/bootstrap.min.css";
+
+    :root {
+  --primary-color: #0976db;
+  --primary-light-color: #4d9cd4;
+  --primary-lighter-color: #91c2cc;
+  --primary-bold-color:  #0360b8;
+  /* --primary-text-hover:  */
+  --white-color: #fff;
+  --black-color: #000;
+  --background__color: #f5f5f5;
+  --background-bar__color: #ededed;
+  --text-color: #555555;
+  --btn-hover-color: #37a2b8;
+  --header-with-search: calc(var(--header-height) - var(--header-navbar));
+  --header-height: 70px;
+  --footer-height: 70px; 
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+#root {
+  min-height: 100vh; 
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
